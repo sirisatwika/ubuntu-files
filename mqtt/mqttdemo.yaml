@@ -1,0 +1,86 @@
+name: mqttdemo
+manufacturer: LT
+description: A sensor node that collects data on temperature, pressure, and speed
+model: SN-100
+labels: [temperature, pressure, speed, mqtt]
+deviceResources:
+- description: Temperature sensor
+  name: temperature
+  isHidden: false
+  tag: ""
+  properties:
+    valueType: Float32
+    readWrite: RW
+    units: Celsius
+    minimum: "20.0"
+    maximum: "30.0"
+    defaultValue: ""
+    mask: ""
+    shift: ""
+    scale: ""
+    offset: ""
+    base: ""
+    assertion: ""
+    mediaType: ""
+  attributes: {}
+- description: Pressure sensor
+  name: pressure
+  isHidden: false
+  tag: ""
+  properties:
+    valueType: Float32
+    readWrite: RW
+    units: kPa
+    minimum: "900.0"
+    maximum: "1100.0"
+    defaultValue: ""
+    mask: ""
+    shift: ""
+    scale: ""
+    offset: ""
+    base: ""
+    assertion: ""
+    mediaType: ""
+  attributes: {}
+- description: Speed sensor
+  name: speed
+  isHidden: false
+  tag: ""
+  properties:
+    valueType: Float32
+    readWrite: RW
+    units: km/h
+    minimum: "0.0"
+    maximum: "100.0"
+    defaultValue: ""
+    mask: ""
+    shift: ""
+    scale: ""
+    offset: ""
+    base: ""
+    assertion: ""
+    mediaType: ""
+  attributes: {}
+deviceCommands:
+- name: getTemperature
+  isHidden: false
+  readWrite: R
+  resourceOperations:
+  - deviceResource: temperature
+    defaultValue: ""
+    mappings: {}
+- name: getPressure
+  isHidden: false
+  readWrite: R
+  resourceOperations:
+  - deviceResource: pressure
+    defaultValue: ""
+    mappings: {}
+- name: getSpeed
+  isHidden: false
+  readWrite: R
+  resourceOperations:
+  - deviceResource: speed
+    defaultValue: ""
+    mappings: {}
+
