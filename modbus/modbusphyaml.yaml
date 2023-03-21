@@ -1,0 +1,36 @@
+name: phratedemo
+manufacturer: LT
+description: demo
+model: "103"
+labels: [ph, modbus]
+deviceResources:
+- description: water ph
+  name: ph
+  isHidden: true
+  tag: ""
+  properties:
+    valueType: Float32
+    readWrite: RW
+    units: ""
+    minimum: ""
+    maximum: ""
+    defaultValue: "1"
+    mask: ""
+    shift: ""
+    scale: ""
+    offset: ""
+    base: ""
+    assertion: ""
+    mediaType: ""
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 4004
+deviceCommands:
+- name: Getph
+  isHidden: false
+  readWrite: R
+  resourceOperations:
+  - deviceResource: ph
+    defaultValue: ""
+    mappings: {}
+

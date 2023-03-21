@@ -1,0 +1,36 @@
+name: currentdemo
+manufacturer: LT
+description: demo
+model: "105"
+labels: [current, modbus]
+deviceResources:
+- description: current demo
+  name: current
+  isHidden: true
+  tag: ""
+  properties:
+    valueType: Float32
+    readWrite: RW
+    units: A
+    minimum: ""
+    maximum: ""
+    defaultValue: "1"
+    mask: ""
+    shift: ""
+    scale: ""
+    offset: ""
+    base: ""
+    assertion: ""
+    mediaType: ""
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 4007
+deviceCommands:
+- name: Getcurrent
+  isHidden: false
+  readWrite: R
+  resourceOperations:
+  - deviceResource: current
+    defaultValue: ""
+    mappings: {}
+

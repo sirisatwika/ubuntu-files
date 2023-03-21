@@ -1,0 +1,36 @@
+name: flowratedemo
+manufacturer: LT
+description: demo
+model: "101"
+labels: [flowrate, modbus]
+deviceResources:
+- description: water flowrate
+  name: flowrate
+  isHidden: true
+  tag: ""
+  properties:
+    valueType: Float32
+    readWrite: RW
+    units: m3/s
+    minimum: ""
+    maximum: ""
+    defaultValue: "1"
+    mask: ""
+    shift: ""
+    scale: ""
+    offset: ""
+    base: ""
+    assertion: ""
+    mediaType: ""
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 4001
+deviceCommands:
+- name: Getflowrate
+  isHidden: false
+  readWrite: R
+  resourceOperations:
+  - deviceResource: flowrate
+    defaultValue: ""
+    mappings: {}
+

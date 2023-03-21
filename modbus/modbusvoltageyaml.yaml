@@ -1,0 +1,36 @@
+name: voltagedemo
+manufacturer: LT
+description: demo
+model: "108"
+labels: [voltage, modbus]
+deviceResources:
+- description: voltage demo
+  name: voltage
+  isHidden: true
+  tag: ""
+  properties:
+    valueType: Float32
+    readWrite: RW
+    units: V
+    minimum: ""
+    maximum: ""
+    defaultValue: "1"
+    mask: ""
+    shift: ""
+    scale: ""
+    offset: ""
+    base: ""
+    assertion: ""
+    mediaType: ""
+  attributes:
+    primaryTable: HOLDING_REGISTERS
+    startingAddress: 4011
+deviceCommands:
+- name: Getvoltage
+  isHidden: false
+  readWrite: R
+  resourceOperations:
+  - deviceResource: voltage
+    defaultValue: ""
+    mappings: {}
+
